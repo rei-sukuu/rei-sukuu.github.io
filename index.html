@@ -5,220 +5,231 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>怜依くんを救う会</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
+
 
 :root {
-  --bg: #FAFBFC;
-  --white: #FFFFFF;
-  --amber: #D97B3A;
-  --amber-l: #F2C49A;
-  --amber-p: #FDF3EA;
-  --deep: #1C2B3A;
-  --mid: #3D5166;
-  --text: #2A3A4A;
-  --muted: #6B7A8D;
-  --border: #E4EAF0;
-  --sky: #7FB3CE;
-  --sky-p: #EBF4FA;
-  --sage: #7A9E8E;
-  --rose: #C9736A;
-  --green: #4A9E6E;
-  --shadow: 0 2px 16px rgba(28,43,58,0.08);
-  --shadow-lg: 0 6px 32px rgba(28,43,58,0.12);
+ --bg: #FAFBFC;
+ --white: #FFFFFF;
+ --amber: #D97B3A;
+ --amber-l: #F2C49A;
+ --amber-p: #FDF3EA;
+ --deep: #1C2B3A;
+ --mid: #3D5166;
+ --text: #2A3A4A;
+ --muted: #6B7A8D;
+ --border: #E4EAF0;
+ --sky: #7FB3CE;
+ --sky-p: #EBF4FA;
+ --sage: #7A9E8E;
+ --rose: #C9736A;
+ --green: #4A9E6E;
+ --shadow: 0 2px 16px rgba(28,43,58,0.08);
+ --shadow-lg: 0 6px 32px rgba(28,43,58,0.12);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.9;font-size:14px;}
 
+
 /* ── NAV ── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:stretch;height:56px;
+ position:fixed;top:0;left:0;right:0;z-index:200;
+ background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);
+ border-bottom:1px solid var(--border);
+ display:flex;align-items:stretch;height:56px;
 }
 .nav-brand{
-  padding:0 24px;
-  display:flex;align-items:center;gap:8px;
-  font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;color:var(--deep);
-  border-right:1px solid var(--border);white-space:nowrap;
-  text-decoration:none;
+ padding:0 24px;
+ display:flex;align-items:center;gap:8px;
+ font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;color:var(--deep);
+ border-right:1px solid var(--border);white-space:nowrap;
+ text-decoration:none;
 }
 .nav-brand .amber{color:var(--amber);}
 .nav-links{
-  display:flex;align-items:stretch;flex:1;overflow-x:auto;
+ display:flex;align-items:stretch;flex:1;overflow-x:auto;
 }
 .nav-links a{
-  display:flex;align-items:center;
-  padding:0 18px;
-  font-size:12px;color:var(--muted);text-decoration:none;
-  border-bottom:2px solid transparent;
-  white-space:nowrap;transition:color .2s,border-color .2s;
+ display:flex;align-items:center;
+ padding:0 18px;
+ font-size:12px;color:var(--muted);text-decoration:none;
+ border-bottom:2px solid transparent;
+ white-space:nowrap;transition:color .2s,border-color .2s;
 }
 .nav-links a:hover{color:var(--deep);border-bottom-color:var(--amber);}
 .nav-links a.active{color:var(--amber);border-bottom-color:var(--amber);font-weight:500;}
 .nav-cta{
-  margin-left:auto;padding:0 20px;
-  display:flex;align-items:center;
+ margin-left:auto;padding:0 20px;
+ display:flex;align-items:center;
 }
 .nav-cta a{
-  background:var(--amber);color:white;
-  padding:8px 18px;border-radius:20px;font-size:12px;font-weight:600;
-  text-decoration:none;white-space:nowrap;transition:background .2s;
+ background:var(--amber);color:white;
+ padding:8px 18px;border-radius:20px;font-size:12px;font-weight:600;
+ text-decoration:none;white-space:nowrap;transition:background .2s;
 }
 .nav-cta a:hover{background:#C06A2A;}
 
+
 /* ── HERO ── */
 .hero{
-  padding-top:56px;
-  min-height:100vh;display:flex;flex-direction:column;
-  background:linear-gradient(160deg,#1C2B3A 0%,#2E4257 55%,#1a3344 100%);
-  position:relative;overflow:hidden;
+ padding-top:56px;
+ min-height:100vh;display:flex;flex-direction:column;
+ background:linear-gradient(160deg,#1C2B3A 0%,#2E4257 55%,#1a3344 100%);
+ position:relative;overflow:hidden;
 }
 .hero-bg-circle{
-  position:absolute;border-radius:50%;pointer-events:none;
+ position:absolute;border-radius:50%;pointer-events:none;
 }
 .hbc1{width:500px;height:500px;background:radial-gradient(circle,rgba(217,123,58,0.15),transparent);top:-100px;left:-100px;}
 .hbc2{width:400px;height:400px;background:radial-gradient(circle,rgba(127,179,206,0.1),transparent);bottom:-80px;right:-80px;}
 
+
 .hero-inner{
-  flex:1;display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1100px;margin:0 auto;width:100%;padding:60px 40px 40px;
-  position:relative;z-index:1;align-items:center;
+ flex:1;display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1100px;margin:0 auto;width:100%;padding:60px 40px 40px;
+ position:relative;z-index:1;align-items:center;
 }
 .hero-text{}
 .hero-eyebrow{
-  font-size:11px;letter-spacing:.2em;color:rgba(217,123,58,.8);
-  font-weight:500;margin-bottom:16px;
-  display:flex;align-items:center;gap:8px;
+ font-size:11px;letter-spacing:.2em;color:rgba(217,123,58,.8);
+ font-weight:500;margin-bottom:16px;
+ display:flex;align-items:center;gap:8px;
 }
 .hero-eyebrow::before{content:'';width:20px;height:1px;background:rgba(217,123,58,.6);}
 .hero-name{
-  font-family:'Shippori Mincho',serif;font-size:clamp(52px,8vw,80px);
-  font-weight:800;color:white;line-height:1.05;letter-spacing:-.02em;margin-bottom:8px;
+ font-family:'Noto Sans JP',sans-serif;font-size:clamp(52px,8vw,80px);
+ font-weight:800;color:white;line-height:1.05;letter-spacing:-.02em;margin-bottom:8px;
 }
 .hero-name .amber{color:var(--amber);}
 .hero-kana{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.28em;margin-bottom:28px;}
 .hero-lead{
-  font-family:'Shippori Mincho',serif;font-size:16px;font-weight:500;
-  color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:32px;
+ font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:500;
+ color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:32px;
 }
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
 .hero-badge{
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
-  border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,.8);
+ background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+ border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,.8);
 }
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
 .btn-primary{
-  background:var(--amber);color:white;padding:12px 24px;border-radius:24px;
-  font-size:13px;font-weight:600;text-decoration:none;
-  transition:all .2s;box-shadow:0 4px 16px rgba(217,123,58,.35);
-  display:inline-flex;align-items:center;gap:6px;
+ background:var(--amber);color:white;padding:12px 24px;border-radius:24px;
+ font-size:13px;font-weight:600;text-decoration:none;
+ transition:all .2s;box-shadow:0 4px 16px rgba(217,123,58,.35);
+ display:inline-flex;align-items:center;gap:6px;
 }
 .btn-primary:hover{background:#C06A2A;transform:translateY(-2px);}
 .btn-outline{
-  border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);
-  padding:12px 24px;border-radius:24px;font-size:13px;font-weight:400;
-  text-decoration:none;transition:all .2s;
-  display:inline-flex;align-items:center;gap:6px;
+ border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);
+ padding:12px 24px;border-radius:24px;font-size:13px;font-weight:400;
+ text-decoration:none;transition:all .2s;
+ display:inline-flex;align-items:center;gap:6px;
 }
 .btn-outline:hover{border-color:var(--amber-l);color:white;}
 
+
 .hero-photo{
-  display:flex;align-items:center;justify-content:center;position:relative;
+ display:flex;align-items:center;justify-content:center;position:relative;
 }
 .photo-frame{
-  width:280px;height:360px;
-  background:linear-gradient(135deg,rgba(242,196,154,.2),rgba(127,179,206,.15));
-  border-radius:160px 160px 20px 20px;
-  border:1px solid rgba(255,255,255,.15);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
-  position:relative;
+ width:280px;height:360px;
+ background:linear-gradient(135deg,rgba(242,196,154,.2),rgba(127,179,206,.15));
+ border-radius:160px 160px 20px 20px;
+ border:1px solid rgba(255,255,255,.15);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+ position:relative;
 }
 .photo-frame .icon{font-size:72px;opacity:.5;}
 .photo-frame .note{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.06em;}
 .photo-tag{
-  position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);
-  background:var(--amber);color:white;padding:8px 20px;border-radius:20px;
-  font-family:'Shippori Mincho',serif;font-size:13px;font-weight:600;white-space:nowrap;
-  box-shadow:0 4px 16px rgba(217,123,58,.4);
+ position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);
+ background:var(--amber);color:white;padding:8px 20px;border-radius:20px;
+ font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:600;white-space:nowrap;
+ box-shadow:0 4px 16px rgba(217,123,58,.4);
 }
+
 
 /* status bar */
 .status-bar{
-  background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.08);
-  padding:16px 40px;
+ background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.08);
+ padding:16px 40px;
 }
 .status-bar-inner{
-  max-width:1100px;margin:0 auto;
-  display:flex;align-items:center;gap:14px;
+ max-width:1100px;margin:0 auto;
+ display:flex;align-items:center;gap:14px;
 }
 .status-dot{width:8px;height:8px;border-radius:50%;background:var(--amber-l);flex-shrink:0;animation:blink 2.5s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
 .status-text{font-size:12px;color:rgba(255,255,255,.7);line-height:1.6;}
 .status-text strong{color:var(--amber-l);}
 
+
 /* ── PAGE SECTIONS ── */
 .page-section{padding:72px 24px;}
 .container{max-width:900px;margin:0 auto;}
 
+
 .section-label{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:11px;letter-spacing:.18em;color:var(--amber);font-weight:500;
-  text-transform:uppercase;margin-bottom:12px;
+ display:inline-flex;align-items:center;gap:8px;
+ font-size:11px;letter-spacing:.18em;color:var(--amber);font-weight:500;
+ text-transform:uppercase;margin-bottom:12px;
 }
 .section-label::before{content:'';width:16px;height:1px;background:var(--amber-l);}
 .section-title{
-  font-family:'Shippori Mincho',serif;
-  font-size:clamp(22px,4vw,30px);font-weight:700;color:var(--deep);line-height:1.5;margin-bottom:36px;
+ font-family:'Noto Sans JP',sans-serif;
+ font-size:clamp(22px,4vw,30px);font-weight:700;color:var(--deep);line-height:1.5;margin-bottom:36px;
 }
+
 
 /* ── [A] REI PROFILE ── */
 .profile-grid{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:start;}
 .profile-img{
-  aspect-ratio:3/4;border-radius:20px;
-  background:linear-gradient(135deg,var(--amber-p),var(--sky-p));
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
-  border:1px solid var(--border);box-shadow:var(--shadow-lg);
+ aspect-ratio:3/4;border-radius:20px;
+ background:linear-gradient(135deg,var(--amber-p),var(--sky-p));
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+ border:1px solid var(--border);box-shadow:var(--shadow-lg);
 }
 .profile-img .icon{font-size:64px;opacity:.35;}
 .profile-img .note{font-size:10px;color:var(--muted);letter-spacing:.06em;}
 .profile-body p{font-size:14px;color:var(--muted);line-height:2;margin-bottom:18px;}
 .profile-body p strong{color:var(--deep);}
 .pullquote{
-  border-left:3px solid var(--amber);padding:14px 20px;
-  background:var(--amber-p);border-radius:0 10px 10px 0;
-  font-family:'Shippori Mincho',serif;font-size:15px;font-weight:500;color:var(--deep);
-  line-height:1.85;margin:24px 0;
+ border-left:3px solid var(--amber);padding:14px 20px;
+ background:var(--amber-p);border-radius:0 10px 10px 0;
+ font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:500;color:var(--deep);
+ line-height:1.85;margin:24px 0;
 }
+
 
 /* diff badge */
 .diff-badge{
-  display:inline-flex;align-items:center;gap:4px;
-  background:#FFF3CD;border:1px solid #FBBF24;border-radius:6px;
-  padding:2px 8px;font-size:10px;color:#92400E;font-weight:600;
-  vertical-align:middle;margin-left:6px;
+ display:inline-flex;align-items:center;gap:4px;
+ background:#FFF3CD;border:1px solid #FBBF24;border-radius:6px;
+ padding:2px 8px;font-size:10px;color:#92400E;font-weight:600;
+ vertical-align:middle;margin-left:6px;
 }
+
 
 /* ── [B] TIMELINE ── */
 .alt-bg{background:white;}
 .tl{position:relative;padding-left:28px;display:flex;flex-direction:column;gap:0;}
 .tl::before{content:'';position:absolute;left:6px;top:8px;bottom:0;width:2px;
-  background:linear-gradient(to bottom,var(--amber-l),var(--sky),transparent);}
+ background:linear-gradient(to bottom,var(--amber-l),var(--sky),transparent);}
 .tl-item{position:relative;padding-bottom:28px;}
 .tl-item:last-child{padding-bottom:0;}
 .tl-dot{
-  position:absolute;left:-28px;top:5px;width:14px;height:14px;
-  border-radius:50%;border:2px solid white;background:var(--amber);
-  box-shadow:0 0 0 2px var(--amber-l);
+ position:absolute;left:-28px;top:5px;width:14px;height:14px;
+ border-radius:50%;border:2px solid white;background:var(--amber);
+ box-shadow:0 0 0 2px var(--amber-l);
 }
 .tl-dot.sky{background:var(--sky);box-shadow:0 0 0 2px var(--sky-p);}
 .tl-dot.sage{background:var(--sage);box-shadow:0 0 0 2px #EAF2EE;}
 .tl-dot.rose{background:var(--rose);box-shadow:0 0 0 2px #FAEEEC;}
 .tl-dot.now{background:white;border:2px solid var(--amber);
-  box-shadow:0 0 0 3px rgba(217,123,58,.25);animation:nowpulse 2.5s ease-in-out infinite;}
+ box-shadow:0 0 0 3px rgba(217,123,58,.25);animation:nowpulse 2.5s ease-in-out infinite;}
 @keyframes nowpulse{0%,100%{box-shadow:0 0 0 3px rgba(217,123,58,.25);}50%{box-shadow:0 0 0 7px rgba(217,123,58,.08);}}
 .tl-date{font-size:10px;color:var(--amber);font-weight:600;letter-spacing:.1em;margin-bottom:3px;}
-.tl-t{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:5px;}
+.tl-t{font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:5px;}
 .tl-b{font-size:13px;color:var(--muted);line-height:1.85;}
 .tl-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:8px;margin-left:6px;font-weight:500;vertical-align:middle;}
 .tag-a{background:var(--amber-p);color:var(--amber);}
@@ -226,182 +237,190 @@ nav{
 .tag-g{background:#EAF2EE;color:#4A7E6E;}
 .tag-n{background:var(--deep);color:white;}
 
+
 /* ── [C] DISEASE ── */
 .disease-section{background:var(--deep);}
 .disease-section .section-label{color:var(--amber-l);}
 .disease-section .section-title{color:white;}
 .disease-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:28px;}
 .d-card{
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;padding:20px;
+ background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+ border-radius:14px;padding:20px;
 }
 .d-card .dicon{font-size:26px;margin-bottom:10px;}
 .d-card h3{font-size:12px;color:var(--amber-l);font-weight:600;margin-bottom:6px;letter-spacing:.04em;}
 .d-card p{font-size:12px;color:rgba(255,255,255,.6);line-height:1.8;}
 .disease-note{
-  background:rgba(217,123,58,.12);border:1px solid rgba(217,123,58,.25);
-  border-radius:12px;padding:18px 22px;font-size:13px;color:rgba(255,255,255,.75);line-height:1.85;
+ background:rgba(217,123,58,.12);border:1px solid rgba(217,123,58,.25);
+ border-radius:12px;padding:18px 22px;font-size:13px;color:rgba(255,255,255,.75);line-height:1.85;
 }
 .disease-note strong{color:var(--amber-l);}
+
 
 /* ── [D] MESSAGES ── */
 .messages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
 .msg-card{
-  background:white;border:1px solid var(--border);border-radius:14px;padding:22px;
-  box-shadow:var(--shadow);
+ background:white;border:1px solid var(--border);border-radius:14px;padding:22px;
+ box-shadow:var(--shadow);
 }
 .msg-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
 .msg-avatar{
-  width:40px;height:40px;border-radius:50%;
-  background:linear-gradient(135deg,var(--amber-p),var(--sky-p));
-  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+ width:40px;height:40px;border-radius:50%;
+ background:linear-gradient(135deg,var(--amber-p),var(--sky-p));
+ display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
 }
 .msg-name{font-size:13px;font-weight:600;color:var(--deep);}
 .msg-from{font-size:11px;color:var(--muted);}
 .msg-body{font-size:13px;color:var(--muted);line-height:1.85;}
 .msg-empty{
-  grid-column:1/-1;text-align:center;
-  padding:48px 24px;background:white;border:1.5px dashed var(--border);border-radius:14px;
+ grid-column:1/-1;text-align:center;
+ padding:48px 24px;background:white;border:1.5px dashed var(--border);border-radius:14px;
 }
 .msg-empty p{font-size:13px;color:var(--muted);line-height:1.9;}
 .msg-form-box{
-  margin-top:32px;background:var(--amber-p);border:1px solid rgba(217,123,58,.25);
-  border-radius:14px;padding:24px;
+ margin-top:32px;background:var(--amber-p);border:1px solid rgba(217,123,58,.25);
+ border-radius:14px;padding:24px;
 }
-.msg-form-title{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:16px;}
+.msg-form-title{font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:16px;}
 .form-row{display:flex;flex-direction:column;gap:12px;}
 .form-input,.form-textarea{
-  width:100%;padding:11px 14px;border:1.5px solid rgba(217,123,58,.3);
-  border-radius:10px;background:white;font-size:13px;font-family:'Noto Sans JP',sans-serif;
-  color:var(--text);outline:none;transition:border-color .2s;
+ width:100%;padding:11px 14px;border:1.5px solid rgba(217,123,58,.3);
+ border-radius:10px;background:white;font-size:13px;font-family:'Noto Sans JP',sans-serif;
+ color:var(--text);outline:none;transition:border-color .2s;
 }
 .form-input:focus,.form-textarea:focus{border-color:var(--amber);}
 .form-input::placeholder,.form-textarea::placeholder{color:var(--muted);}
 .form-textarea{min-height:100px;resize:vertical;}
 .form-submit{
-  background:var(--amber);color:white;border:none;padding:12px;border-radius:10px;
-  font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:600;cursor:pointer;
-  transition:background .2s;
+ background:var(--amber);color:white;border:none;padding:12px;border-radius:10px;
+ font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:600;cursor:pointer;
+ transition:background .2s;
 }
 .form-submit:hover{background:#C06A2A;}
+
 
 /* ── [E] REPORTS ── */
 .report-list{display:flex;flex-direction:column;gap:16px;}
 .report-card{
-  background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;
-  display:flex;align-items:stretch;box-shadow:var(--shadow);
-  transition:transform .2s,box-shadow .2s;
+ background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;
+ display:flex;align-items:stretch;box-shadow:var(--shadow);
+ transition:transform .2s,box-shadow .2s;
 }
 .report-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);}
 .report-date-block{
-  background:var(--deep);color:white;padding:20px;min-width:90px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;flex-shrink:0;
+ background:var(--deep);color:white;padding:20px;min-width:90px;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;flex-shrink:0;
 }
 .report-month{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.08em;}
-.report-day{font-size:24px;font-weight:700;font-family:'Shippori Mincho',serif;}
+.report-day{font-size:24px;font-weight:700;font-family:'Noto Sans JP',sans-serif;}
 .report-year{font-size:10px;color:rgba(255,255,255,.4);}
 .report-body{padding:16px 20px;flex:1;}
 .report-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:6px;margin-bottom:6px;font-weight:500;}
 .rt-update{background:#EAF2EE;color:#3A7A5A;}
 .rt-treatment{background:var(--sky-p);color:#3A6E8E;}
-.report-title{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;color:var(--deep);margin-bottom:6px;}
+.report-title{font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:600;color:var(--deep);margin-bottom:6px;}
 .report-excerpt{font-size:12px;color:var(--muted);line-height:1.75;}
 .report-empty{
-  text-align:center;padding:48px 24px;
-  background:white;border:1.5px dashed var(--border);border-radius:12px;
+ text-align:center;padding:48px 24px;
+ background:white;border:1.5px dashed var(--border);border-radius:12px;
 }
 .report-empty p{font-size:13px;color:var(--muted);line-height:1.9;}
+
 
 /* ── [F] MEDIA ── */
 .media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
 .media-card{
-  background:white;border:1px solid var(--border);border-radius:12px;padding:20px;
-  box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;
+ background:white;border:1px solid var(--border);border-radius:12px;padding:20px;
+ box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;
 }
 .media-icon-box{
-  width:44px;height:44px;border-radius:10px;background:var(--amber-p);
-  display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;
+ width:44px;height:44px;border-radius:10px;background:var(--amber-p);
+ display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;
 }
 .media-info h4{font-size:13px;font-weight:600;color:var(--deep);margin-bottom:3px;}
 .media-info p{font-size:11px;color:var(--muted);line-height:1.6;}
 .media-empty{
-  grid-column:1/-1;text-align:center;padding:48px 24px;
-  background:white;border:1.5px dashed var(--border);border-radius:12px;
+ grid-column:1/-1;text-align:center;padding:48px 24px;
+ background:white;border:1.5px dashed var(--border);border-radius:12px;
 }
 .media-empty p{font-size:13px;color:var(--muted);line-height:1.9;}
 
+
 /* ── [G] ACCOUNTING ── */
 .accounting-coming{
-  background:white;border:1px solid var(--border);border-radius:14px;
-  padding:40px;text-align:center;box-shadow:var(--shadow);
+ background:white;border:1px solid var(--border);border-radius:14px;
+ padding:40px;text-align:center;box-shadow:var(--shadow);
 }
 .ac-icon{font-size:40px;margin-bottom:16px;}
-.ac-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--deep);margin-bottom:12px;}
+.ac-title{font-family:'Noto Sans JP',sans-serif;font-size:18px;font-weight:700;color:var(--deep);margin-bottom:12px;}
 .ac-body{font-size:13px;color:var(--muted);line-height:1.9;max-width:480px;margin:0 auto 24px;}
 .ac-note{
-  background:var(--amber-p);border:1px solid rgba(217,123,58,.2);border-radius:10px;
-  padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.8;text-align:left;max-width:480px;margin:0 auto;
+ background:var(--amber-p);border:1px solid rgba(217,123,58,.2);border-radius:10px;
+ padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.8;text-align:left;max-width:480px;margin:0 auto;
 }
 .ac-note strong{color:var(--amber);}
+
 
 /* ── [H] DONATION ── */
 .donation-section{background:var(--deep);}
 .donation-section .section-label{color:var(--amber-l);}
 .donation-section .section-title{color:white;}
 .donation-coming{
-  background:rgba(255,255,255,.06);border:1.5px dashed rgba(217,123,58,.4);
-  border-radius:20px;padding:48px 36px;text-align:center;max-width:560px;margin:0 auto 40px;
+ background:rgba(255,255,255,.06);border:1.5px dashed rgba(217,123,58,.4);
+ border-radius:20px;padding:48px 36px;text-align:center;max-width:560px;margin:0 auto 40px;
 }
 .dc-icon{font-size:48px;margin-bottom:18px;}
-.dc-title{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:white;margin-bottom:12px;}
+.dc-title{font-family:'Noto Sans JP',sans-serif;font-size:20px;font-weight:700;color:white;margin-bottom:12px;}
 .dc-body{font-size:13px;color:rgba(255,255,255,.65);line-height:1.9;margin-bottom:28px;}
 .dc-body strong{color:var(--amber-l);}
 .notify-row{display:flex;gap:10px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
 .notify-input{
-  flex:1;min-width:180px;padding:11px 16px;
-  border:1.5px solid rgba(217,123,58,.4);border-radius:22px;
-  background:rgba(255,255,255,.1);font-size:13px;font-family:'Noto Sans JP',sans-serif;
-  color:white;outline:none;transition:border-color .2s;
+ flex:1;min-width:180px;padding:11px 16px;
+ border:1.5px solid rgba(217,123,58,.4);border-radius:22px;
+ background:rgba(255,255,255,.1);font-size:13px;font-family:'Noto Sans JP',sans-serif;
+ color:white;outline:none;transition:border-color .2s;
 }
 .notify-input::placeholder{color:rgba(255,255,255,.35);}
 .notify-input:focus{border-color:var(--amber-l);}
 .notify-btn{
-  background:var(--amber);color:white;border:none;
-  padding:11px 20px;border-radius:22px;font-size:13px;
-  font-family:'Noto Sans JP',sans-serif;font-weight:600;cursor:pointer;
-  transition:background .2s;white-space:nowrap;
+ background:var(--amber);color:white;border:none;
+ padding:11px 20px;border-radius:22px;font-size:13px;
+ font-family:'Noto Sans JP',sans-serif;font-weight:600;cursor:pointer;
+ transition:background .2s;white-space:nowrap;
 }
 .notify-btn:hover{background:#C06A2A;}
 .notify-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:12px;}
 .donation-alt-title{font-size:13px;color:rgba(255,255,255,.5);text-align:center;margin-bottom:18px;}
 .donation-alt-cards{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 .da-card{
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
-  border-radius:14px;padding:18px 22px;max-width:220px;text-align:left;
+ background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+ border-radius:14px;padding:18px 22px;max-width:220px;text-align:left;
 }
 .da-icon{font-size:22px;margin-bottom:8px;}
 .da-title{font-size:13px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:5px;}
 .da-body{font-size:11px;color:rgba(255,255,255,.5);line-height:1.7;}
 
+
 /* ── [I] RULES/FAQ ── */
 .rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .rules-box{background:white;border:1px solid var(--border);border-radius:14px;padding:28px;box-shadow:var(--shadow);}
-.rules-box h3{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:700;color:var(--deep);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.rules-box h3{font-family:'Noto Sans JP',sans-serif;font-size:17px;font-weight:700;color:var(--deep);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);}
 .rules-text{font-size:12px;color:var(--muted);line-height:1.9;}
 .faq-list{display:flex;flex-direction:column;gap:16px;}
 .faq-item{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
 .faq-q{
-  padding:16px 20px;font-size:13px;font-weight:600;color:var(--deep);
-  cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+ padding:16px 20px;font-size:13px;font-weight:600;color:var(--deep);
+ cursor:pointer;display:flex;justify-content:space-between;align-items:center;
 }
 .faq-q::after{content:'›';font-size:18px;color:var(--amber);transform:rotate(90deg);display:inline-block;}
 .faq-a{padding:0 20px 16px;font-size:13px;color:var(--muted);line-height:1.85;}
+
 
 /* ── FOOTER ── */
 footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 .footer-inner{max-width:900px;margin:0 auto;}
 .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:36px;}
-.footer-brand{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;margin-bottom:8px;}
+.footer-brand{font-family:'Noto Sans JP',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;}
 .footer-brand .amber{color:var(--amber);}
 .footer-sub{font-size:11px;color:rgba(255,255,255,.4);line-height:1.8;}
 .footer-nav{display:flex;flex-direction:column;gap:8px;}
@@ -409,6 +428,8 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 .footer-nav a:hover{color:var(--amber-l);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 .footer-copy{font-size:11px;color:rgba(255,255,255,.3);}
+
+
 
 
 /* responsive */
@@ -423,373 +444,392 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 </head>
 <body>
 
+
 <!-- NAV（ちーちゃん構成に準拠） -->
 <nav>
-  <a class="nav-brand" href="#hero"><span class="amber">怜依</span>くんを救う会</a>
-  <div class="nav-links">
-    <a href="#profile" class="active">怜依くん</a>
-    <a href="#messages">応援メッセージ</a>
-    <a href="#reports">経過報告</a>
-    <a href="#media">メディア露出</a>
-    <a href="#accounting">会計報告</a>
-    <a href="#donation">寄付</a>
-    <a href="#rules">会則／よくある質問</a>
-  </div>
-  <div class="nav-cta"><a href="#donation">❤️ 支援する</a></div>
+ <a class="nav-brand" href="#hero"><span class="amber">怜依</span>くんを救う会</a>
+ <div class="nav-links">
+ <a href="#profile" class="active">怜依くん</a>
+ <a href="#messages">応援メッセージ</a>
+ <a href="#reports">経過報告</a>
+ <a href="#media">メディア露出</a>
+ <a href="#accounting">会計報告</a>
+ <a href="#donation">寄付</a>
+ <a href="#rules">会則／よくある質問</a>
+ </div>
+ <div class="nav-cta"><a href="#donation">❤️ 支援する</a></div>
 </nav>
+
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hbc1 hero-bg-circle"></div>
-  <div class="hbc2 hero-bg-circle"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-eyebrow">救う会からのお願い</div>
-      <div class="hero-name"><span class="amber">怜依</span>くんを<br>救う会</div>
-      <div class="hero-kana">れ い く ん を す く う か い</div>
-      <div class="hero-lead">
+ <div class="hbc1 hero-bg-circle"></div>
+ <div class="hbc2 hero-bg-circle"></div>
+ <div class="hero-inner">
+ <div class="hero-text">
+ <div class="hero-eyebrow">救う会からのお願い</div>
+ <div class="hero-name"><span class="amber">怜依</span>くんを<br>救う会</div>
+ <div class="hero-kana">れ い く ん を す く う か い</div>
+ <div class="hero-lead">
         まだ1歳半。これからすべてが始まるはずでした。<br>
         怜依くんに、もっと生きる時間を。
-      </div>
-      <div class="hero-badges">
-        <span class="hero-badge">👦 1歳6ヶ月・男の子</span>
-        <span class="hero-badge">🏥 肝臓のラブドイド腫瘍</span>
-        <span class="hero-badge">🌏 海外での臨床試験参加を目指しています</span>
-      </div>
-      <div class="hero-btns">
-        <a href="#profile" class="btn-primary">怜依くんのことを知る</a>
-        <a href="#donation" class="btn-outline">支援について</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="photo-frame">
-        <div class="icon">👶</div>
-        <div class="note">怜依ちゃんの写真をここに</div>
-        <div class="photo-tag">怜依（れい）・1歳6ヶ月・男の子</div>
-      </div>
-    </div>
-  </div>
-  <div class="status-bar">
-    <div class="status-bar-inner">
-      <div class="status-dot"></div>
-      <div class="status-text">
-        <strong>現在のステータス：</strong>
+ </div>
+ <div class="hero-badges">
+ <span class="hero-badge">👦 1歳6ヶ月・男の子</span>
+ <span class="hero-badge">🏥 肝臓のラブドイド腫瘍</span>
+ <span class="hero-badge">🌏 海外での臨床試験参加を目指しています</span>
+ </div>
+ <div class="hero-btns">
+ <a href="#profile" class="btn-primary">怜依くんのことを知る</a>
+ <a href="#donation" class="btn-outline">支援について</a>
+ </div>
+ </div>
+ <div class="hero-photo">
+ <div class="photo-frame">
+ <div class="icon">👶</div>
+ <div class="note">怜依ちゃんの写真をここに</div>
+ <div class="photo-tag">怜依（れい）・1歳6ヶ月・男の子</div>
+ </div>
+ </div>
+ </div>
+ <div class="status-bar">
+ <div class="status-bar-inner">
+ <div class="status-dot"></div>
+ <div class="status-text">
+ <strong>現在のステータス：</strong>
         海外での臨床試験参加に向け、担当医と治療方針を検討中です。治療内容・費用が確定し次第、寄付の受付を開始します。
-      </div>
-    </div>
-  </div>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ① 怜依ちゃん（プロフィール） -->
 <section class="page-section" id="profile">
-  <div class="container">
-    <div class="section-label">怜依くん</div>
-    <div class="section-title">まだ1歳半。これからすべてが始まるはずでした。</div>
-    <div class="profile-grid">
-      <div class="profile-img">
-        <div class="icon">👦</div>
-        <div class="note">実際の写真に差し替えてください</div>
-      </div>
-      <div class="profile-body">
-        <p>怜依は2024年9月に生まれました。当時3歳だったお兄ちゃんとともにすくすくと成長し、1歳半となる4月にはお兄ちゃんと同じ保育園に通う未来を当たり前のように想像していました。</p>
-        <div class="pullquote">
+ <div class="container">
+ <div class="section-label">怜依くん</div>
+ <div class="section-title">まだ1歳半。これからすべてが始まるはずでした。</div>
+ <div class="profile-grid">
+ <div class="profile-img">
+ <div class="icon">👦</div>
+ <div class="note">実際の写真に差し替えてください</div>
+ </div>
+ <div class="profile-body">
+ <p>怜依は2024年9月に生まれました。当時3歳だったお兄ちゃんとともにすくすくと成長し、1歳半となる4月にはお兄ちゃんと同じ保育園に通う未来を当たり前のように想像していました。</p>
+ <div class="pullquote">
           「まさに青天の霹靂。いつも飛び切りの笑顔をみせてくれる怜依、まさかこんなに大変な病気を抱えているなんて、夢にも思わなかった」
-        </div>
-        <p><strong>2025年8月、まだ生後10ヶ月の怜依の肝臓に腫瘍が発見されました。</strong>診断名は「悪性ラブドイド腫瘍」。国内で年間わずか15例ほどしか報告されない極めて稀ながんで、標準治療すら確立されていません。さらに肺や腹膜への転移も認められるとのこと。私たちは一夜にして、目に映るものすべてが色を失い、思考が停止し、絶望の淵に立たされました。</p>
-        <p>それから今日まで、怜依は幾度となく山を乗り越え、懸命に治療に向き合ってきました。まだ身体が小さいため、どんな治療にもリスクが伴う状況下で、適時ベストな判断ができているのかを暗中模索しながらも、抗がん剤・放射線・治験と、効く可能性のあるあらゆる治療を試みました。しかし、いずれの治療でも腫瘍の劇的な縮小は認められず、むしろ化学療法に耐性がついてきてしまっているような所見がみられ、国内で参加できる臨床試験も尽きてしまいました。</p>
-        <p>それでも、<strong>こんなにも懸命な怜依を横目に親が諦めるわけにはいかない。わずかでも望みがあるなら挑戦したい。</strong>今、海外で行われている臨床試験への参加を目指しています。少しでも怜依のことを知ってくれる方が増えてほしい。それが私たちの、今の願いです。</p>
+ </div>
+ <p><strong>2025年8月、まだ生後10ヶ月の怜依の肝臓に腫瘍が発見されました。</strong>診断名は「悪性ラブドイド腫瘍」。国内で年間わずか15例ほどしか報告されない極めて稀ながんで、標準治療すら確立されていません。さらに肺や腹膜への転移も認められるとのこと。私たちは一夜にして、目に映るものすべてが色を失い、思考が停止し、絶望の淵に立たされました。</p>
+ <p>それから今日まで、怜依は幾度となく山を乗り越え、懸命に治療に向き合ってきました。まだ身体が小さいため、どんな治療にもリスクが伴う状況下で、適時ベストな判断ができているのかを暗中模索しながらも、抗がん剤・放射線・治験と、効く可能性のあるあらゆる治療を試みました。しかし、いずれの治療でも腫瘍の劇的な縮小は認められず、むしろ化学療法に耐性がついてきてしまっているような所見がみられ、国内で参加できる臨床試験も尽きてしまいました。</p>
+ <p>それでも、<strong>こんなにも懸命な怜依を横目に親が諦めるわけにはいかない。わずかでも望みがあるなら挑戦したい。</strong>今、海外で行われている臨床試験への参加を目指しています。少しでも怜依のことを知ってくれる方が増えてほしい。それが私たちの、今の願いです。</p>
 
-        <!-- TIMELINE embedded in profile like chii-chan site -->
-        <div style="margin-top:32px;">
-          <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;color:var(--deep);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);">これまでの治療経過</div>
-          <div class="tl">
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-date">2025年8月（生後10ヶ月）</div>
-              <div class="tl-t">肝臓にラブドイド腫瘍が発見 <span class="tl-tag tag-a">診断</span></div>
-              <div class="tl-b">生後10ヶ月での診断。「悪性ラブドイド腫瘍」と告げられ、すぐに治療方針の検討が始まるも、腹水が急激に溜まり始め、自力での呼吸も困難な状態に。しばらくの間、集中治療室にて人工呼吸による呼吸管理を行いつつ、腹水のドレーンを強行。なんとか命をつなぎ、抗がん剤を投与するスタートラインに立ちました。</div>
-            <div class="tl-item">
-              <div class="tl-dot sky"></div>
-              <div class="tl-date">2025年9月〜10月</div>
-              <div class="tl-t">抗がん剤・放射線治療を開始 <span class="tl-tag tag-s">治療</span></div>
-              <div class="tl-b">両方を組み合わせた治療を継続。効くといわれる化学療法を試みましたが、肝腫瘍の劇的な縮小や転移している肺腫瘍の消滅は認められず、外科的切除には至りませんでした。</div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot sage"></div>
-              <div class="tl-date">2025年11月〜12月</div>
-              <div class="tl-t">治験（ニボルマブ）に参加 → 中止 <span class="tl-tag tag-g">治験</span></div>
-              <div class="tl-b">免疫チェックポイント阻害薬「ニボルマブ」の治験に参加。一定の効果が見られたものの、腫瘍の進行スピードが上回り、怜依の体調が悪化したため、止むを得ず中止となりました。</div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot rose"></div>
-              <div class="tl-date">2026年初頭</div>
-              <div class="tl-t">化学療法への耐性が生じ、国内の選択肢が尽きる</div>
-              <div class="tl-b">抗がん剤・放射線治療を継続するも効果が薄れてきました。化学療法への耐性がつき、国内で参加できる臨床試験も残っていない状況です。</div>
-            </div>
-            <div class="tl-item">
-              <div class="tl-dot now"></div>
-              <div class="tl-date">現在</div>
-              <div class="tl-t">海外の臨床試験への参加を目指して <span class="tl-tag tag-n">今ここ</span></div>
-              <div class="tl-b">わずかでも望みがあるなら挑戦したい——その思いで、担当医と海外の臨床試験参加に向けた治療方針を相談中です。内容・費用が確定し次第、広く支援を呼びかける予定です。</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+ <!-- TIMELINE embedded in profile like chii-chan site -->
+ <div style="margin-top:32px;">
+ <div style="font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:700;color:var(--deep);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);">これまでの治療経過</div>
+ <div class="tl">
+ <div class="tl-item">
+ <div class="tl-dot"></div>
+ <div class="tl-date">2025年8月（生後10ヶ月）</div>
+ <div class="tl-t">肝臓にラブドイド腫瘍が発見 <span class="tl-tag tag-a">診断</span></div>
+ <div class="tl-b">生後10ヶ月での診断。「悪性ラブドイド腫瘍」と告げられ、すぐに治療方針の検討が始まるも、腹水が急激に溜まり始め、自力での呼吸も困難な状態に。しばらくの間、集中治療室にて人工呼吸による呼吸管理を行いつつ、腹水のドレーンを強行。なんとか命をつなぎ、抗がん剤を投与するスタートラインに立ちました。</div>
+ <div class="tl-item">
+ <div class="tl-dot sky"></div>
+ <div class="tl-date">2025年9月〜10月</div>
+ <div class="tl-t">抗がん剤・放射線治療を開始 <span class="tl-tag tag-s">治療</span></div>
+ <div class="tl-b">両方を組み合わせた治療を継続。効くといわれる化学療法を試みましたが、肝腫瘍の劇的な縮小や転移している肺腫瘍の消滅は認められず、外科的切除には至りませんでした。</div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot sage"></div>
+ <div class="tl-date">2025年11月〜12月</div>
+ <div class="tl-t">治験（ニボルマブ）に参加 → 中止 <span class="tl-tag tag-g">治験</span></div>
+ <div class="tl-b">免疫チェックポイント阻害薬「ニボルマブ」の治験に参加。一定の効果が見られたものの、腫瘍の進行スピードが上回り、怜依の体調が悪化したため、止むを得ず中止となりました。</div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot rose"></div>
+ <div class="tl-date">2026年初頭</div>
+ <div class="tl-t">化学療法への耐性が生じ、国内の選択肢が尽きる</div>
+ <div class="tl-b">抗がん剤・放射線治療を継続するも効果が薄れてきました。化学療法への耐性がつき、国内で参加できる臨床試験も残っていない状況です。</div>
+ </div>
+ <div class="tl-item">
+ <div class="tl-dot now"></div>
+ <div class="tl-date">現在</div>
+ <div class="tl-t">海外の臨床試験への参加を目指して <span class="tl-tag tag-n">今ここ</span></div>
+ <div class="tl-b">わずかでも望みがあるなら挑戦したい——その思いで、担当医と海外の臨床試験参加に向けた治療方針を相談中です。内容・費用が確定し次第、広く支援を呼びかける予定です。</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- DISEASE (between profile and messages, like chii-chan) -->
 <section class="page-section disease-section">
-  <div class="container">
-    <div class="section-label">病気について</div>
-    <div class="section-title">悪性ラブドイド腫瘍とは</div>
-    <div class="disease-cards">
-      <div class="d-card"><div class="dicon">🔬</div><h3>国内年間わずか15例ほど</h3><p>悪性ラブドイド腫瘍は国内で年間15例程度しか報告されない極めてまれながんです。世界的にも症例が少なく、研究・治療法の開発が大幅に遅れています。</p></div>
-      <div class="d-card"><div class="dicon">👶</div><h3>患者の多くは1歳未満</h3><p>発症者の多くは1歳未満の乳幼児です。怜依くんも生後10ヶ月で診断されました。あまりに小さな体での闘いが続いています。</p></div>
-      <div class="d-card"><div class="dicon">⚠️</div><h3>標準治療が確立されていない</h3><p>症例が少なすぎるため、どの治療法が有効かを示す十分なデータがなく、国内では確立された標準治療が存在しません。医師も手探りで対応せざるを得ない病気です。</p></div>
-      <div class="d-card"><div class="dicon">🌏</div><h3>海外の臨床試験に望みをつなぐ</h3><p>国内で参加できる臨床試験が尽きた今、海外の研究機関で行われている臨床試験が唯一の選択肢です。わずかな望みに向けて挑戦したいと考えています。</p></div>
-    </div>
+ <div class="container">
+ <div class="section-label">病気について</div>
+ <div class="section-title">悪性ラブドイド腫瘍とは</div>
+ <div class="disease-cards">
+ <div class="d-card"><div class="dicon">🔬</div><h3>国内年間わずか15例ほど</h3><p>悪性ラブドイド腫瘍は国内で年間15例程度しか報告されない極めてまれながんです。世界的にも症例が少なく、研究・治療法の開発が大幅に遅れています。</p></div>
+ <div class="d-card"><div class="dicon">👶</div><h3>患者の多くは1歳未満</h3><p>発症者の多くは1歳未満の乳幼児です。怜依くんも生後10ヶ月で診断されました。あまりに小さな体での闘いが続いています。</p></div>
+ <div class="d-card"><div class="dicon">⚠️</div><h3>標準治療が確立されていない</h3><p>症例が少なすぎるため、どの治療法が有効かを示す十分なデータがなく、国内では確立された標準治療が存在しません。医師も手探りで対応せざるを得ない病気です。</p></div>
+ <div class="d-card"><div class="dicon">🌏</div><h3>海外の臨床試験に望みをつなぐ</h3><p>国内で参加できる臨床試験が尽きた今、海外の研究機関で行われている臨床試験が唯一の選択肢です。わずかな望みに向けて挑戦したいと考えています。</p></div>
+ </div>
 
-    <!-- 海外治療になぜ大金が必要か -->
-    <div style="margin-top:28px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:24px 28px;">
-      <div style="font-family:'Shippori Mincho',serif; font-size:16px; font-weight:700; color:var(--amber-l); margin-bottom:16px; display:flex; align-items:center; gap:8px;">
+
+ <!-- 海外治療になぜ大金が必要か -->
+ <div style="margin-top:28px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:24px 28px;">
+ <div style="font-family:'Noto Sans JP',sans-serif; font-size:16px; font-weight:700; color:var(--amber-l); margin-bottom:16px; display:flex; align-items:center; gap:8px;">
         💰 なぜ海外治療には大きな費用がかかるのか
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-        <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
-          <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🏥 治療費が全額自己負担</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外での治療は日本の健康保険が適用されません。臨床試験参加の場合も、渡航・滞在・付随する検査費用は原則として自己負担となります。</div>
-        </div>
-        <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
-          <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">✈️ 渡航・長期滞在費</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">治療期間中は現地に長期滞在が必要です。往復の航空券に加え、数ヶ月単位の現地での生活費・宿泊費が発生します。家族全員分が必要になります。</div>
-        </div>
-        <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
-          <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🔄 複数回の渡航が必要</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">臨床試験は複数クールにわたることが多く、経過観察のための再渡航も必要です。治療が長期化するほど費用も積み重なります。</div>
-        </div>
-        <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
-          <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">📋 コーディネート・書類費用</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外の病院との交渉・医療通訳・書類翻訳・ビザ取得など、治療以外にも多くの手続き費用が発生します。</div>
-        </div>
-      </div>
-      <div style="margin-top:14px; font-size:12px; color:rgba(255,255,255,.5); line-height:1.8; border-top:1px solid rgba(255,255,255,.1); padding-top:12px;">
+ </div>
+ <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🏥 治療費が全額自己負担</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外での治療は日本の健康保険が適用されません。臨床試験参加の場合も、渡航・滞在・付随する検査費用は原則として自己負担となります。</div>
+ </div>
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">✈️ 渡航・長期滞在費</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">治療期間中は現地に長期滞在が必要です。往復の航空券に加え、数ヶ月単位の現地での生活費・宿泊費が発生します。家族全員分が必要になります。</div>
+ </div>
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🔄 複数回の渡航が必要</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">臨床試験は複数クールにわたることが多く、経過観察のための再渡航も必要です。治療が長期化するほど費用も積み重なります。</div>
+ </div>
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">📋 コーディネート・書類費用</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外の病院との交渉・医療通訳・書類翻訳・ビザ取得など、治療以外にも多くの手続き費用が発生します。</div>
+ </div>
+ </div>
+ <div style="margin-top:14px; font-size:12px; color:rgba(255,255,255,.5); line-height:1.8; border-top:1px solid rgba(255,255,255,.1); padding-top:12px;">
         ※ 具体的な費用は治療方針の確定後にお知らせします。目標金額は担当医との協議も踏まえ設定予定です。
-      </div>
-    </div>
+ </div>
+ </div>
 
-    <div class="disease-note" style="margin-top:20px;">
-      <strong>ご家族より：</strong>この病気は名前を聞いたことのない方がほとんどだと思います。私たちもそうでした。国内でできることはすべてやり尽くしました。それでも怜依のために、少しでも望みがある道を諦めたくない。その一心で海外の臨床試験を目指しています。
-    </div>
-  </div>
+
+ <div class="disease-note" style="margin-top:20px;">
+ <strong>ご家族より：</strong>この病気は名前を聞いたことのない方がほとんどだと思います。私たちもそうでした。国内でできることはすべてやり尽くしました。それでも怜依のために、少しでも望みがある道を諦めたくない。その一心で海外の臨床試験を目指しています。
+ </div>
+ </div>
 </section>
+
 
 <!-- ② 応援メッセージ -->
 <section class="page-section alt-bg" id="messages">
-  <div class="container">
-    <div class="section-label">応援メッセージ</div>
-    <div class="section-title">怜依くんへの応援をお聞かせください</div>
+ <div class="container">
+ <div class="section-label">応援メッセージ</div>
+ <div class="section-title">怜依くんへの応援をお聞かせください</div>
 
-    <!-- sample messages (初期はまだ少ない) -->
-    <div class="messages-grid" style="margin-bottom:28px;">
-      <div class="msg-card">
-        <div class="msg-top">
-          <div class="msg-avatar">👨‍👩‍👧</div>
-          <div><div class="msg-name">○○ ○○ 様</div><div class="msg-from">ご家族の知人</div></div>
-        </div>
-        <div class="msg-body">怜依くんのことを聞いて、胸が痛くなりました。一日でも早く元気な姿で笑っていてほしいです。ご家族の皆さまもどうかご自身を大切に。応援しています。</div>
-      </div>
-      <div class="msg-card">
-        <div class="msg-top">
-          <div class="msg-avatar">👩</div>
-          <div><div class="msg-name">匿名 様</div><div class="msg-from">SNSより</div></div>
-        </div>
-        <div class="msg-body">同じ1歳の子を持つ親として、他人事とは思えません。怜依くん、頑張れ。絶対に治ると信じています。</div>
-      </div>
-    </div>
 
-    <div class="msg-form-box">
-      <div class="msg-form-title">応援メッセージを送る</div>
-      <div class="form-row">
-        <input type="text" class="form-input" placeholder="お名前（匿名希望の方はそのようにご記入ください）">
-        <textarea class="form-textarea" placeholder="怜依くんやご家族への応援メッセージをお書きください"></textarea>
-        <button class="form-submit">メッセージを送る</button>
-      </div>
-    </div>
-  </div>
+ <!-- sample messages (初期はまだ少ない) -->
+ <div class="messages-grid" style="margin-bottom:28px;">
+ <div class="msg-card">
+ <div class="msg-top">
+ <div class="msg-avatar">👨‍👩‍👧</div>
+ <div><div class="msg-name">○○ ○○ 様</div><div class="msg-from">ご家族の知人</div></div>
+ </div>
+ <div class="msg-body">怜依くんのことを聞いて、胸が痛くなりました。一日でも早く元気な姿で笑っていてほしいです。ご家族の皆さまもどうかご自身を大切に。応援しています。</div>
+ </div>
+ <div class="msg-card">
+ <div class="msg-top">
+ <div class="msg-avatar">👩</div>
+ <div><div class="msg-name">匿名 様</div><div class="msg-from">SNSより</div></div>
+ </div>
+ <div class="msg-body">同じ1歳の子を持つ親として、他人事とは思えません。怜依くん、頑張れ。絶対に治ると信じています。</div>
+ </div>
+ </div>
+
+
+ <div class="msg-form-box">
+ <div class="msg-form-title">応援メッセージを送る</div>
+ <div class="form-row">
+ <input type="text" class="form-input" placeholder="お名前（匿名希望の方はそのようにご記入ください）">
+ <textarea class="form-textarea" placeholder="怜依くんやご家族への応援メッセージをお書きください"></textarea>
+ <button class="form-submit">メッセージを送る</button>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ③ 経過報告 -->
 <section class="page-section" id="reports">
-  <div class="container">
-    <div class="section-label">経過報告</div>
-    <div class="section-title">怜依くんの最新状況</div>
-    <div class="report-list">
-      <div class="report-card">
-        <div class="report-date-block">
-          <span class="report-month">APR</span>
-          <span class="report-day">11</span>
-          <span class="report-year">2026</span>
-        </div>
-        <div class="report-body">
-          <span class="report-tag rt-update">お知らせ</span>
-          <div class="report-title">ホームページを開設しました</div>
-          <div class="report-excerpt">怜依くんを救う会のホームページを開設しました。海外の臨床試験参加に向けた治療方針が決まり次第、寄付の受付を開始する予定です。まずはシェアで応援いただけると幸いです。</div>
-        </div>
-      </div>
-      <div class="report-card">
-        <div class="report-date-block" style="background:#3D5166;">
-          <span class="report-month">APR</span>
-          <span class="report-day">08</span>
-          <span class="report-year">2026</span>
-        </div>
-        <div class="report-body">
-          <span class="report-tag rt-treatment">治療状況</span>
-          <div class="report-title">現在の状況：海外臨床試験参加に向けて担当医と相談中</div>
-          <div class="report-excerpt">国内でできる治療はやり尽くしました。化学療法への耐性がつき、参加できる国内の臨床試験も残っていません。担当医と海外の臨床試験参加について協議を続けています。治療先・内容・費用が確定次第、こちらでご報告します。</div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-label">経過報告</div>
+ <div class="section-title">怜依くんの最新状況</div>
+ <div class="report-list">
+ <div class="report-card">
+ <div class="report-date-block">
+ <span class="report-month">APR</span>
+ <span class="report-day">11</span>
+ <span class="report-year">2026</span>
+ </div>
+ <div class="report-body">
+ <span class="report-tag rt-update">お知らせ</span>
+ <div class="report-title">ホームページを開設しました</div>
+ <div class="report-excerpt">怜依くんを救う会のホームページを開設しました。海外の臨床試験参加に向けた治療方針が決まり次第、寄付の受付を開始する予定です。まずはシェアで応援いただけると幸いです。</div>
+ </div>
+ </div>
+ <div class="report-card">
+ <div class="report-date-block" style="background:#3D5166;">
+ <span class="report-month">APR</span>
+ <span class="report-day">08</span>
+ <span class="report-year">2026</span>
+ </div>
+ <div class="report-body">
+ <span class="report-tag rt-treatment">治療状況</span>
+ <div class="report-title">現在の状況：海外臨床試験参加に向けて担当医と相談中</div>
+ <div class="report-excerpt">国内でできる治療はやり尽くしました。化学療法への耐性がつき、参加できる国内の臨床試験も残っていません。担当医と海外の臨床試験参加について協議を続けています。治療先・内容・費用が確定次第、こちらでご報告します。</div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ④ メディア露出 -->
 <section class="page-section alt-bg" id="media">
-  <div class="container">
-    <div class="section-label">メディア露出</div>
-    <div class="section-title">メディア掲載情報</div>
-    <div class="media-grid">
-      <div class="media-empty">
-        <p>現在、メディア掲載情報はありません。<br>取材・掲載のご相談はお問い合わせフォームよりお願いします。<br><br>
-        <strong style="color:var(--amber);">メディアの方へ：</strong><br>
+ <div class="container">
+ <div class="section-label">メディア露出</div>
+ <div class="section-title">メディア掲載情報</div>
+ <div class="media-grid">
+ <div class="media-empty">
+ <p>現在、メディア掲載情報はありません。<br>取材・掲載のご相談はお問い合わせフォームよりお願いします。<br><br>
+ <strong style="color:var(--amber);">メディアの方へ：</strong><br>
         怜依くんの状況を広く伝えていただける媒体からのご連絡をお待ちしています。</p>
-      </div>
-    </div>
-  </div>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ⑤ 会計報告 -->
 <section class="page-section" id="accounting">
-  <div class="container">
-    <div class="section-label">会計報告</div>
-    <div class="section-title">寄付金の使途と報告</div>
-    <div class="accounting-coming">
-      <div class="ac-icon">📊</div>
-      <div class="ac-title">募金受付開始後、定期的に公開します</div>
-      <div class="ac-body">
+ <div class="container">
+ <div class="section-label">会計報告</div>
+ <div class="section-title">寄付金の使途と報告</div>
+ <div class="accounting-coming">
+ <div class="ac-icon">📊</div>
+ <div class="ac-title">募金受付開始後、定期的に公開します</div>
+ <div class="ac-body">
         いただいたご支援がどのように使われたか、定期的かつ透明性をもって報告することを約束します。
         海外治療の費用が確定し、募金を受け付け始めた時点で第1回の会計報告を掲載します。
-      </div>
-      <div class="ac-note">
-        <strong>報告予定の内容：</strong><br>
+ </div>
+ <div class="ac-note">
+ <strong>報告予定の内容：</strong><br>
         募金総額・支援者数 ／ 治療費・渡航費・滞在費の内訳 ／ 余剰金が発生した場合の使途（他の支援を必要とする患者団体への寄付を予定）
-      </div>
-    </div>
-  </div>
+ </div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ⑥ 寄付 -->
 <section class="page-section donation-section" id="donation">
-  <div class="container">
-    <div class="section-label">寄付</div>
-    <div class="section-title">支援募集は、もうすぐ始まります</div>
-    <div class="donation-coming">
-      <div class="dc-icon">🕊️</div>
-      <div class="dc-title">海外臨床試験の方針が決まり次第、<br>支援を募り始めます</div>
-      <div class="dc-body">
-        <strong>治療内容と費用の見積もりが確定し次第</strong>、<br>
+ <div class="container">
+ <div class="section-label">寄付</div>
+ <div class="section-title">支援募集は、もうすぐ始まります</div>
+ <div class="donation-coming">
+ <div class="dc-icon">🕊️</div>
+ <div class="dc-title">海外臨床試験の方針が決まり次第、<br>支援を募り始めます</div>
+ <div class="dc-body">
+ <strong>治療内容と費用の見積もりが確定し次第</strong>、<br>
         振込口座・クレジット決済・クラウドファンディングの情報を掲載します。<br>
         開始のお知らせを受け取りたい方は、メールアドレスをご登録ください。
-      </div>
-      <div class="notify-row">
-        <input type="email" class="notify-input" placeholder="メールアドレス">
-        <button class="notify-btn">通知を受け取る</button>
-      </div>
-      <div class="notify-note">支援開始のご案内のみ送信します</div>
-    </div>
-    <div class="donation-alt-title">今すぐできること</div>
-    <div class="donation-alt-cards">
-      <div class="da-card"><div class="da-icon">📢</div><div class="da-title">シェアする</div><div class="da-body">SNSや口コミで広めることが今一番の力になります。一人でも多くの方に届けてください。</div></div>
-      <div class="da-card"><div class="da-icon">💌</div><div class="da-title">応援メッセージ</div><div class="da-body">ご家族への励ましのメッセージが、闘い続ける力になります。</div></div>
-      <div class="da-card"><div class="da-icon">🔔</div><div class="da-title">通知登録</div><div class="da-body">支援開始をいち早く受け取れます。上のフォームからどうぞ。</div></div>
-    </div>
-  </div>
+ </div>
+ <div class="notify-row">
+ <input type="email" class="notify-input" placeholder="メールアドレス">
+ <button class="notify-btn">通知を受け取る</button>
+ </div>
+ <div class="notify-note">支援開始のご案内のみ送信します</div>
+ </div>
+ <div class="donation-alt-title">今すぐできること</div>
+ <div class="donation-alt-cards">
+ <div class="da-card"><div class="da-icon">📢</div><div class="da-title">シェアする</div><div class="da-body">SNSや口コミで広めることが今一番の力になります。一人でも多くの方に届けてください。</div></div>
+ <div class="da-card"><div class="da-icon">💌</div><div class="da-title">応援メッセージ</div><div class="da-body">ご家族への励ましのメッセージが、闘い続ける力になります。</div></div>
+ <div class="da-card"><div class="da-icon">🔔</div><div class="da-title">通知登録</div><div class="da-body">支援開始をいち早く受け取れます。上のフォームからどうぞ。</div></div>
+ </div>
+ </div>
 </section>
+
 
 <!-- ⑦ 会則／よくある質問 -->
 <section class="page-section alt-bg" id="rules">
-  <div class="container">
-    <div class="section-label">会則／よくある質問</div>
-    <div class="section-title">会の規約と、よくいただくご質問</div>
+ <div class="container">
+ <div class="section-label">会則／よくある質問</div>
+ <div class="section-title">会の規約と、よくいただくご質問</div>
 
-    <!-- サマリーカード -->
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;">
-      <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
-        <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">📋 会の目的</div>
-        <div style="font-size:13px; color:var(--muted); line-height:1.85;">怜依くんの海外における臨床試験参加の実現と、治療終了に至るまでの本人と家族を支援するために設立された非営利の任意団体です。</div>
-      </div>
-      <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
-        <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">💰 余剰金について</div>
-        <div style="font-size:13px; color:var(--muted); line-height:1.85;">目標額を超えた余剰金が発生した場合は、他の海外治療・移植を必要としている患者さんのための支援団体への寄付に充てます。</div>
-      </div>
-      <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
-        <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">🔒 個人情報</div>
-        <div style="font-size:13px; color:var(--muted); line-height:1.85;">支援者の個人情報は活動の連絡・報告のみに使用し、第三者への提供は行いません。本会解散時に責任をもって廃棄します。</div>
-      </div>
-      <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
-        <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">🧾 寄付控除</div>
-        <div style="font-size:13px; color:var(--muted); line-height:1.85;">現時点では任意団体のため、寄附金控除の対象とはなりません。ご了承のうえご支援をご検討いただけますと幸いです。</div>
-      </div>
-    </div>
 
-    <!-- ドリルダウンボタン -->
-    <a href="rules.html" style="
+ <!-- サマリーカード -->
+ <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;">
+ <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
+ <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">📋 会の目的</div>
+ <div style="font-size:13px; color:var(--muted); line-height:1.85;">怜依くんの海外における臨床試験参加の実現と、治療終了に至るまでの本人と家族を支援するために設立された非営利の任意団体です。</div>
+ </div>
+ <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
+ <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">💰 余剰金について</div>
+ <div style="font-size:13px; color:var(--muted); line-height:1.85;">目標額を超えた余剰金が発生した場合は、他の海外治療・移植を必要としている患者さんのための支援団体への寄付に充てます。</div>
+ </div>
+ <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
+ <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">🔒 個人情報</div>
+ <div style="font-size:13px; color:var(--muted); line-height:1.85;">支援者の個人情報は活動の連絡・報告のみに使用し、第三者への提供は行いません。本会解散時に責任をもって廃棄します。</div>
+ </div>
+ <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
+ <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">🧾 寄付控除</div>
+ <div style="font-size:13px; color:var(--muted); line-height:1.85;">現時点では任意団体のため、寄附金控除の対象とはなりません。ご了承のうえご支援をご検討いただけますと幸いです。</div>
+ </div>
+ </div>
+
+
+ <!-- ドリルダウンボタン -->
+ <a href="rules.html" style="
       display:flex; align-items:center; justify-content:space-between;
       background:var(--deep); color:white;
       border-radius:14px; padding:24px 28px;
       text-decoration:none;
       transition:background .2s, transform .2s;
       box-shadow:var(--shadow-lg);
-    " onmouseover="this.style.background='#2E4257'; this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.background='var(--deep)'; this.style.transform='translateY(0)'">
-      <div>
-        <div style="font-family:'Shippori Mincho',serif; font-size:18px; font-weight:700; margin-bottom:6px;">
+ " onmouseover="this.style.background='#2E4257'; this.style.transform='translateY(-2px)'"
+ onmouseout="this.style.background='var(--deep)'; this.style.transform='translateY(0)'">
+ <div>
+ <div style="font-family:'Noto Sans JP',sans-serif; font-size:18px; font-weight:700; margin-bottom:6px;">
           会則全文・よくある質問（FAQ）を読む
-        </div>
-        <div style="font-size:12px; color:rgba(255,255,255,.55); line-height:1.7;">
+ </div>
+ <div style="font-size:12px; color:rgba(255,255,255,.55); line-height:1.7;">
           会則15条・FAQ9項目を掲載 ／ 寄付方法・費用・余剰金・税控除など
-        </div>
-      </div>
-      <div style="font-size:28px; color:var(--amber-l); flex-shrink:0; margin-left:20px;">›</div>
-    </a>
-  </div>
+ </div>
+ </div>
+ <div style="font-size:28px; color:var(--amber-l); flex-shrink:0; margin-left:20px;">›</div>
+ </a>
+ </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand"><span class="amber">怜依</span>くんを救う会</div>
-        <div class="footer-sub">れいくんをすくうかい<br>小児がんと闘う怜依（1歳6ヶ月・男の子）を支援する会<br>2026年設立</div>
-      </div>
-      <div class="footer-nav">
-        <a href="#profile">怜依くん</a>
-        <a href="#messages">応援メッセージ</a>
-        <a href="#reports">経過報告</a>
-        <a href="#media">メディア露出</a>
-        <a href="#accounting">会計報告</a>
-        <a href="#donation">寄付</a>
-        <a href="rules.html">会則／よくある質問</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 怜依くんを救う会. All rights reserved.</div>
-      <div class="footer-copy">怜依くんの回復を、心よりお祈りしています 🌟</div>
-    </div>
-  </div>
+ <div class="footer-inner">
+ <div class="footer-top">
+ <div>
+ <div class="footer-brand"><span class="amber">怜依</span>くんを救う会</div>
+ <div class="footer-sub">れいくんをすくうかい<br>小児がんと闘う怜依（1歳6ヶ月・男の子）を支援する会<br>2026年設立</div>
+ </div>
+ <div class="footer-nav">
+ <a href="#profile">怜依くん</a>
+ <a href="#messages">応援メッセージ</a>
+ <a href="#reports">経過報告</a>
+ <a href="#media">メディア露出</a>
+ <a href="#accounting">会計報告</a>
+ <a href="#donation">寄付</a>
+ <a href="rules.html">会則／よくある質問</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div class="footer-copy">© 2026 怜依くんを救う会. All rights reserved.</div>
+ <div class="footer-copy">怜依くんの回復を、心よりお祈りしています 🌟</div>
+ </div>
+ </div>
 </footer>
+
 
 </body>
 </html>

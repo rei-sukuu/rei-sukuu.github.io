@@ -434,6 +434,152 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 
 
 
+/* ── REI PROFILE FACT CARD（新プロフィール欄） ── */
+.fact-card{
+ background:white;border:1px solid var(--border);border-radius:16px;
+ padding:28px 32px;box-shadow:var(--shadow);
+}
+.fact-card-grid{
+ display:grid;grid-template-columns:120px 1fr;gap:24px 28px;
+}
+.fact-label{
+ font-size:11px;color:var(--amber);font-weight:600;letter-spacing:.1em;
+ padding-top:3px;
+}
+.fact-value{font-size:14px;color:var(--text);line-height:1.85;}
+.fact-value .placeholder{
+ background:#FFF7E6;border:1px dashed var(--amber-l);
+ padding:2px 8px;border-radius:6px;font-size:12px;color:#8B5E1F;
+ margin-right:4px;display:inline-block;
+}
+.fact-intro{
+ font-size:14px;color:var(--muted);line-height:2;margin-bottom:24px;
+}
+.fact-intro strong{color:var(--deep);}
+
+/* ── INTRO STORY（突然の発覚） ── */
+.story-section{background:var(--deep);}
+.story-section .section-label{color:var(--amber-l);}
+.story-section .section-title{color:white;}
+.story-card{
+ background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+ border-radius:14px;padding:24px 28px;margin-bottom:18px;
+}
+.story-card h3{
+ font-size:14px;color:var(--amber-l);font-weight:600;
+ margin-bottom:10px;letter-spacing:.04em;
+}
+.story-card p{
+ font-size:13px;color:rgba(255,255,255,.78);line-height:1.95;
+ margin-bottom:8px;
+}
+.story-card p:last-child{margin-bottom:0;}
+.story-card p strong{color:white;}
+.stat-row{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+ gap:14px;margin-top:18px;
+}
+.stat-box{
+ background:rgba(217,123,58,.12);border:1px solid rgba(217,123,58,.25);
+ border-radius:10px;padding:14px 16px;text-align:center;
+}
+.stat-num{
+ font-size:28px;font-weight:800;color:var(--amber-l);
+ line-height:1.2;margin-bottom:4px;
+}
+.stat-num .small{font-size:14px;font-weight:600;}
+.stat-cap{font-size:11px;color:rgba(255,255,255,.6);line-height:1.5;}
+
+/* ── TIMELINE WRAPPER (treatment progress) ── */
+.tl-summary{
+ background:white;border:1px solid var(--border);border-radius:14px;
+ padding:22px 26px;margin-bottom:28px;display:flex;align-items:center;gap:16px;
+ box-shadow:var(--shadow);
+}
+.tl-summary-icon{
+ width:44px;height:44px;border-radius:50%;background:var(--amber-p);
+ display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;
+}
+.tl-summary-text{font-size:14px;color:var(--text);line-height:1.85;}
+.tl-summary-text strong{color:var(--deep);}
+
+/* ── URGENT (急がなければ救えない命) ── */
+.urgent-grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:16px;margin-top:8px;
+}
+.urgent-card{
+ background:white;border:1px solid var(--border);border-left:3px solid var(--rose);
+ border-radius:10px;padding:18px 20px;box-shadow:var(--shadow);
+}
+.urgent-card h4{
+ font-size:13px;color:var(--rose);font-weight:700;margin-bottom:8px;
+}
+.urgent-card p{font-size:13px;color:var(--muted);line-height:1.85;}
+
+/* ── HOPE (一筋の光) ── */
+.hope-section{
+ background:linear-gradient(160deg,#EBF4FA 0%,#FDF3EA 100%);
+}
+.hope-card{
+ background:white;border:1px solid var(--border);border-radius:14px;
+ padding:24px 28px;box-shadow:var(--shadow);margin-bottom:16px;
+}
+.hope-card h3{
+ font-size:14px;color:var(--amber);font-weight:700;margin-bottom:10px;
+ display:flex;align-items:center;gap:8px;
+}
+.hope-card p{font-size:14px;color:var(--text);line-height:1.95;margin-bottom:8px;}
+.hope-card p:last-child{margin-bottom:0;}
+.hope-card p strong{color:var(--deep);}
+
+/* ── COST (海外治療費) ── */
+.cost-section{background:var(--deep);}
+.cost-section .section-label{color:var(--amber-l);}
+.cost-section .section-title{color:white;}
+
+/* ── LATEST (最新の状況) ── */
+.latest-card{
+ background:white;border:1px solid var(--border);border-radius:14px;
+ padding:24px 28px;box-shadow:var(--shadow);margin-bottom:20px;
+ display:flex;gap:20px;align-items:flex-start;
+}
+.latest-date{
+ background:var(--amber);color:white;border-radius:10px;
+ padding:14px 12px;min-width:78px;text-align:center;flex-shrink:0;
+}
+.latest-date .m{font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.85);}
+.latest-date .d{font-size:24px;font-weight:800;line-height:1.2;}
+.latest-date .y{font-size:10px;color:rgba(255,255,255,.7);}
+.latest-body{flex:1;}
+.latest-body .tag{
+ display:inline-block;font-size:10px;padding:2px 8px;border-radius:6px;
+ background:#EAF2EE;color:#3A7A5A;font-weight:500;margin-bottom:6px;
+}
+.latest-body h4{
+ font-size:15px;font-weight:700;color:var(--deep);margin-bottom:6px;
+}
+.latest-body p{font-size:13px;color:var(--muted);line-height:1.85;}
+.blog-link{
+ display:flex;align-items:center;justify-content:space-between;
+ background:var(--deep);color:white;border-radius:14px;
+ padding:20px 26px;text-decoration:none;
+ transition:background .2s,transform .2s;box-shadow:var(--shadow-lg);
+}
+.blog-link:hover{background:#2E4257;transform:translateY(-2px);}
+.blog-link-text{
+ font-size:15px;font-weight:600;
+}
+.blog-link-sub{
+ font-size:11px;color:rgba(255,255,255,.55);margin-top:3px;
+}
+.blog-link-arrow{
+ font-size:24px;color:var(--amber-l);flex-shrink:0;
+}
+
+
+
+
 /* responsive */
 @media(max-width:680px){
   .hero-inner{grid-template-columns:1fr;padding:40px 20px 20px;}
@@ -441,23 +587,28 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
   .profile-grid{grid-template-columns:1fr;}
   .rules-grid{grid-template-columns:1fr;}
   .nav-links{display:none;}
+  .fact-card-grid{grid-template-columns:1fr;gap:6px 0;}
+  .fact-label{padding-top:0;}
+  .fact-value{margin-bottom:14px;}
+  .latest-card{flex-direction:column;gap:14px;}
 }
 </style>
 </head>
 <body>
-
-
-<!-- NAV（ちーちゃん構成に準拠） -->
+<!-- NAV -->
 <nav>
  <a class="nav-brand" href="#hero"><span class="amber">れい</span>くんを救う会</a>
  <div class="nav-links">
- <a href="#profile" class="active">れいくん</a>
+ <a href="#profile" class="active">プロフィール</a>
+ <a href="#story">経緯</a>
+ <a href="#progress">治療経過</a>
+ <a href="#urgent">時間との闘い</a>
+ <a href="#hope">海外臨床試験</a>
+ <a href="#cost">治療費</a>
+ <a href="#latest">最新の状況</a>
  <a href="#messages">応援メッセージ</a>
- <a href="#reports">経過報告</a>
- <a href="#media">メディア露出</a>
- <a href="#accounting">会計報告</a>
  <a href="#donation">寄付</a>
- <a href="#rules">会則／よくある質問</a>
+ <a href="#rules">会則／FAQ</a>
  </div>
  <div class="nav-cta"><a href="#donation">❤️ 支援する</a></div>
 </nav>
@@ -478,7 +629,7 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  <div class="hero-badges">
  <span class="hero-badge">👦 1歳6ヶ月・男の子</span>
  <span class="hero-badge">🏥 肝臓のラブドイド腫瘍</span>
- <span class="hero-badge">🌏 海外での臨床試験参加を目指しています</span>
+ <span class="hero-badge">🌏 海外での臨床試験参加を目指して</span>
  </div>
  <div class="hero-btns">
  <a href="#profile" class="btn-primary">れいくんのことを知る</a>
@@ -488,7 +639,7 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  <div class="hero-photo">
  <div class="photo-frame">
  <div class="icon">👶</div>
- <div class="note">れいちゃんの写真をここに</div>
+ <div class="note">れいくんの写真をここに</div>
  <div class="photo-tag">れい・1歳6ヶ月・男の子</div>
  </div>
  </div>
@@ -498,131 +649,281 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  <div class="status-dot"></div>
  <div class="status-text">
  <strong>現在のステータス：</strong>
-        海外での臨床試験参加に向け、担当医と治療方針を検討中です。治療内容・費用が確定し次第、寄付の受付を開始します。
+        海外（米国）の臨床試験への参加を目指し、複数の医療機関と接触を進めています。治療内容・費用が確定し次第、寄付の受付を開始します。
  </div>
  </div>
  </div>
 </section>
 
 
-<!-- ① れいちゃん（プロフィール） -->
+<!-- ① れいくんプロフィール -->
 <section class="page-section" id="profile">
  <div class="container">
- <div class="section-label">れいくん</div>
- <div class="section-title">まだ1歳半。これからすべてが始まるはずでした。</div>
+ <div class="section-label">PROFILE</div>
+ <div class="section-title">れいくんのこと</div>
  <div class="profile-grid">
  <div class="profile-img">
  <div class="icon">👦</div>
- <div class="note">実際の写真に差し替えてください</div>
+ <div class="note">写真をここに差し替えてください</div>
  </div>
  <div class="profile-body">
- <p>れいは2024年9月に生まれました。当時3歳だったお兄ちゃんとともにすくすくと成長し、1歳半となる4月にはお兄ちゃんと同じ保育園に通う未来を当たり前のように想像していました。</p>
- <div class="pullquote">
-          「まさに青天の霹靂。いつも飛び切りの笑顔をみせてくれるれい、まさかこんなに大変な病気を抱えているなんて、夢にも思わなかった」
+ <p class="fact-intro">
+        この春、保育園に通うはずだった<strong>1歳6ヶ月の男の子</strong>です。<br>
+        生後10ヶ月のときに肝臓のがんが見つかり、現在も闘病を続けています。
+ </p>
+ <div class="fact-card">
+ <div class="fact-card-grid">
+ <div class="fact-label">なまえ</div>
+ <div class="fact-value">れい <span class="placeholder">フルネームを記入</span></div>
+
+ <div class="fact-label">生年月日</div>
+ <div class="fact-value"><span class="placeholder">YYYY年MM月DD日</span>（1歳6ヶ月／2026年4月時点）</div>
+
+ <div class="fact-label">家族構成</div>
+ <div class="fact-value"><span class="placeholder">父・母・兄（◯歳）の4人家族 等</span></div>
+
+ <div class="fact-label">好きなもの</div>
+ <div class="fact-value"><span class="placeholder">例：くるま、絵本、いちご、おにいちゃん…</span></div>
+
+ <div class="fact-label">好きな遊び</div>
+ <div class="fact-value"><span class="placeholder">例：ボール遊び、いないいないばあ…</span></div>
+
+ <div class="fact-label">性格</div>
+ <div class="fact-value"><span class="placeholder">例：よく笑う、人見知りしない、頑張り屋…</span></div>
  </div>
- <p><strong>2025年8月、まだ生後10ヶ月のれいの肝臓に腫瘍が発見されました。</strong>診断名は「悪性ラブドイド腫瘍」。国内で年間わずか15例ほどしか報告されない極めて稀ながんで、標準治療すら確立されていません。さらに肺や腹膜への転移も認められるとのこと。私たちは一夜にして、目に映るものすべてが色を失い、思考が停止し、絶望の淵に立たされました。</p>
- <p>それから今日まで、れいは幾度となく山を乗り越え、懸命に治療に向き合ってきました。まだ身体が小さいため、どんな治療にもリスクが伴う状況下で、適時ベストな判断ができているのかを暗中模索しながらも、抗がん剤・放射線・治験と、効く可能性のあるあらゆる治療を試みました。しかし、いずれの治療でも腫瘍の劇的な縮小は認められず、むしろ化学療法に耐性がついてきてしまっているような所見がみられ、国内で参加できる臨床試験も尽きてしまいました。</p>
- <p>それでも、<strong>こんなにも懸命なれいを横目に親が諦めるわけにはいかない。わずかでも望みがあるなら挑戦したい。</strong>今、海外で行われている臨床試験への参加を目指しています。少しでもれいのことを知ってくれる方が増えてほしい。それが私たちの、今の願いです。</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
 
 
- <!-- TIMELINE embedded in profile like chii-chan site -->
- <div style="margin-top:32px;">
- <div style="font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:700;color:var(--deep);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);">これまでの治療経過</div>
+<!-- ② 経緯（突然の発覚） -->
+<section class="page-section story-section" id="story">
+ <div class="container">
+ <div class="section-label">DIAGNOSIS</div>
+ <div class="section-title">まだ1歳半。これからすべてが始まるはずでした。</div>
+
+ <div class="story-card">
+ <h3>突然の発覚</h3>
+ <p>
+        2025年8月、生後10ヶ月健診をきっかけに精査が行われ、<strong>肝臓に約10cmの大きな腫瘍が見つかりました。</strong>
+        さらに精密検査の結果、肺への転移と腹膜播種も確認されました。
+ </p>
+ <p>
+        診断名は <strong>悪性ラブドイド腫瘍</strong>。国内での年間報告は十数例ほどしかない、極めてまれな小児悪性腫瘍です。
+        標準治療は確立されておらず、進行が非常に速いことが知られています。
+ </p>
+ </div>
+
+ <div class="story-card">
+ <h3>厳しい予後</h3>
+ <p>
+        肝臓に発生した悪性ラブドイド腫瘍は、特に予後が厳しいタイプとされています。
+        遠隔転移（肺・腹膜など）を伴うケースでは、<strong>2年生存率は20%を下回る</strong>と複数の報告が示しています。
+ </p>
+ <div class="stat-row">
+ <div class="stat-box">
+ <div class="stat-num">&lt;20<span class="small">%</span></div>
+ <div class="stat-cap">転移を伴う症例の2年生存率</div>
+ </div>
+ <div class="stat-box">
+ <div class="stat-num">約10<span class="small">cm</span></div>
+ <div class="stat-cap">肝臓に発見された腫瘍の大きさ</div>
+ </div>
+ <div class="stat-box">
+ <div class="stat-num">10<span class="small">ヶ月</span></div>
+ <div class="stat-cap">診断時の月齢</div>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+
+<!-- ③ 治療経過 -->
+<section class="page-section" id="progress">
+ <div class="container">
+ <div class="section-label">TREATMENT</div>
+ <div class="section-title">これまでの治療経過</div>
+
+ <div class="tl-summary">
+ <div class="tl-summary-icon">🩺</div>
+ <div class="tl-summary-text">
+        診断直後の集中治療から始まり、<strong>化学療法・放射線治療・国内の臨床試験</strong>と、有効性が見込まれる治療を順に行ってきました。
+        いずれも一定の効果は得られたものの、腫瘍の十分な縮小には至らず、化学療法への耐性も認められ、現在<strong>国内で参加できる臨床試験の選択肢は尽きている</strong>状況です。
+ </div>
+ </div>
+
  <div class="tl">
  <div class="tl-item">
  <div class="tl-dot"></div>
  <div class="tl-date">2025年8月（生後10ヶ月）</div>
- <div class="tl-t">肝臓にラブドイド腫瘍が発見 <span class="tl-tag tag-a">診断</span></div>
- <div class="tl-b">生後10ヶ月での診断。「悪性ラブドイド腫瘍」と告げられ、すぐに治療方針の検討が始まるも、腹水が急激に溜まり始め、自力での呼吸も困難な状態に。しばらくの間、集中治療室にて人工呼吸による呼吸管理を行いつつ、腹水のドレーンを強行。なんとか命をつなぎ、抗がん剤を投与するスタートラインに立ちました。</div>
+ <div class="tl-t">肝臓に約10cmの腫瘍を発見、悪性ラブドイド腫瘍と診断 <span class="tl-tag tag-a">診断</span></div>
+ <div class="tl-b">10ヶ月健診からの精査で発覚。診断後ほどなくして腹水が急激に増加し、自力での呼吸が困難な状態に。集中治療室で人工呼吸管理と腹水ドレナージを行い、化学療法を開始できる状態にまでもち直しました。</div>
+ </div>
  <div class="tl-item">
  <div class="tl-dot sky"></div>
  <div class="tl-date">2025年9月〜10月</div>
- <div class="tl-t">抗がん剤・放射線治療を開始 <span class="tl-tag tag-s">治療</span></div>
- <div class="tl-b">両方を組み合わせた治療を継続。効くといわれる化学療法を試みましたが、肝腫瘍の劇的な縮小や転移している肺腫瘍の消滅は認められず、外科的切除には至りませんでした。</div>
+ <div class="tl-t">化学療法・放射線治療を開始 <span class="tl-tag tag-s">治療</span></div>
+ <div class="tl-b">標準的に有効性が見込まれる化学療法と放射線治療を組み合わせて実施。腫瘍の一部に反応はみられたものの、肝臓の腫瘍および肺転移巣の劇的な縮小には至らず、外科的切除が可能な状態には到達しませんでした。</div>
  </div>
  <div class="tl-item">
  <div class="tl-dot sage"></div>
  <div class="tl-date">2025年11月〜12月</div>
- <div class="tl-t">治験（ニボルマブ）に参加 → 中止 <span class="tl-tag tag-g">治験</span></div>
- <div class="tl-b">免疫チェックポイント阻害薬「ニボルマブ」の治験に参加。一定の効果が見られたものの、腫瘍の進行スピードが上回り、れいの体調が悪化したため、止むを得ず中止となりました。</div>
+ <div class="tl-t">国内の臨床試験（免疫療法）に参加 → 中止 <span class="tl-tag tag-g">国内臨床試験</span></div>
+ <div class="tl-b">国内で実施されていた免疫療法の臨床試験に参加。一定の効果は認められたものの、腫瘍の進行スピードが上回り、体調への影響もあったため、やむを得ず中止となりました。</div>
  </div>
  <div class="tl-item">
  <div class="tl-dot rose"></div>
  <div class="tl-date">2026年初頭</div>
  <div class="tl-t">化学療法への耐性が生じ、国内の選択肢が尽きる</div>
- <div class="tl-b">抗がん剤・放射線治療を継続するも効果が薄れてきました。化学療法への耐性がつき、国内で参加できる臨床試験も残っていない状況です。</div>
+ <div class="tl-b">追加の化学療法・放射線治療を継続するも効果が薄れ、化学療法への耐性も認められました。国内で参加可能な臨床試験はすべて検討済みとなり、担当医からは <strong>「これ以上の積極的治療は困難で、治療を行わずに残された時間を過ごす選択肢もある」</strong> と説明を受けました。</div>
  </div>
  <div class="tl-item">
  <div class="tl-dot now"></div>
  <div class="tl-date">現在</div>
- <div class="tl-t">海外の臨床試験への参加を目指して <span class="tl-tag tag-n">今ここ</span></div>
- <div class="tl-b">わずかでも望みがあるなら挑戦したい——その思いで、担当医と海外の臨床試験参加に向けた治療方針を相談中です。内容・費用が確定し次第、広く支援を呼びかける予定です。</div>
- </div>
- </div>
- </div>
+ <div class="tl-t">海外（米国）の臨床試験への参加を目指して <span class="tl-tag tag-n">今ここ</span></div>
+ <div class="tl-b">国内では試せる治療がなくなった一方、海外には対象となり得る臨床試験が存在します。現在、米国を中心に複数の医療機関と接触し、参加可能性および渡航・治療スケジュールについて協議を進めています。</div>
  </div>
  </div>
  </div>
 </section>
 
 
-<!-- DISEASE (between profile and messages, like chii-chan) -->
-<section class="page-section disease-section">
+<!-- ④ 急がなければ救えない命 -->
+<section class="page-section alt-bg" id="urgent">
  <div class="container">
- <div class="section-label">病気について</div>
- <div class="section-title">悪性ラブドイド腫瘍とは</div>
- <div class="disease-cards">
- <div class="d-card"><div class="dicon">🔬</div><h3>国内年間わずか15例ほど</h3><p>悪性ラブドイド腫瘍は国内で年間15例程度しか報告されない極めてまれながんです。世界的にも症例が少なく、研究・治療法の開発が大幅に遅れています。</p></div>
- <div class="d-card"><div class="dicon">👶</div><h3>患者の多くは1歳未満</h3><p>発症者の多くは1歳未満の乳幼児です。れいくんも生後10ヶ月で診断されました。あまりに小さな体での闘いが続いています。</p></div>
- <div class="d-card"><div class="dicon">⚠️</div><h3>標準治療が確立されていない</h3><p>症例が少なすぎるため、どの治療法が有効かを示す十分なデータがなく、国内では確立された標準治療が存在しません。医師も手探りで対応せざるを得ない病気です。</p></div>
- <div class="d-card"><div class="dicon">🌏</div><h3>海外の臨床試験に望みをつなぐ</h3><p>国内で参加できる臨床試験が尽きた今、海外の研究機関で行われている臨床試験が唯一の選択肢です。わずかな望みに向けて挑戦したいと考えています。</p></div>
+ <div class="section-label">URGENCY</div>
+ <div class="section-title">時間との闘いです</div>
+ <p style="font-size:14px;color:var(--muted);line-height:1.95;margin-bottom:24px;">
+      悪性ラブドイド腫瘍は進行が非常に速いがんです。国内で試せる治療はすでに尽きており、<strong style="color:var(--deep);">渡航・治療開始までに残された時間はごく限られています。</strong>
+ </p>
+ <div class="urgent-grid">
+ <div class="urgent-card">
+ <h4>⏱ 進行の速さ</h4>
+ <p>悪性ラブドイド腫瘍は数週間単位で進行することが報告されているがんです。週単位での状態変化に備え、迅速に動く必要があります。</p>
  </div>
+ <div class="urgent-card">
+ <h4>🚫 国内の選択肢が尽きた</h4>
+ <p>化学療法・放射線治療・国内の臨床試験はすべて実施・検討済みです。新たに加えられる積極的治療の選択肢は、国内には残っていません。</p>
+ </div>
+ <div class="urgent-card">
+ <h4>✈️ 渡航準備に要する時間</h4>
+ <p>海外受診には、医療機関との交渉、書類・検査データの整備、ビザ手続き、渡航・滞在体制の構築など、複数週間以上の準備が必要です。</p>
+ </div>
+ <div class="urgent-card">
+ <h4>💰 確定後の動き出し</h4>
+ <p>治療内容・費用が確定したのち、寄付の受付・送金・渡航と段階を踏むため、その間も時間は刻一刻と過ぎていきます。</p>
+ </div>
+ </div>
+ </div>
+</section>
 
 
- <!-- 海外治療になぜ大金が必要か -->
- <div style="margin-top:28px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:24px 28px;">
- <div style="font-family:'Noto Sans JP',sans-serif; font-size:16px; font-weight:700; color:var(--amber-l); margin-bottom:16px; display:flex; align-items:center; gap:8px;">
-        💰 なぜ海外治療には大きな費用がかかるのか
+<!-- ⑤ 命をつなぐ一筋の光 -->
+<section class="page-section hope-section" id="hope">
+ <div class="container">
+ <div class="section-label">HOPE</div>
+ <div class="section-title">命をつなぐ、一筋の光</div>
+
+ <div class="hope-card">
+ <h3>🌏 米国の臨床試験という選択肢</h3>
+ <p>
+        国内で選択肢が尽きた一方、米国では悪性ラブドイド腫瘍を対象に含む <strong>新しい治療メカニズムの臨床試験</strong> が複数進行中であることが確認されています。
+ </p>
+ <p>
+        日本国内では未承認・未提供のアプローチも含まれ、これまでの化学療法とは異なる作用機序により、<strong>耐性がついた状態でも反応が期待できる可能性</strong>があります。
+ </p>
  </div>
+
+ <div class="hope-card">
+ <h3>🤝 複数の医療機関と接触中</h3>
+ <p>
+        現在、米国の<strong>複数の医療機関</strong>に対し、症例情報・検査データを共有しながら、参加可能性と受け入れ条件について協議を進めています。
+ </p>
+ <p>
+        試験ごとに対象基準・受け入れ枠・開始時期が異なるため、最も適切な選択肢を見極めたうえで、確定次第このページで報告します。
+ </p>
+ </div>
+ </div>
+</section>
+
+
+<!-- ⑥ 海外治療にかかる費用 -->
+<section class="page-section cost-section" id="cost">
+ <div class="container">
+ <div class="section-label">COST</div>
+ <div class="section-title">海外治療にかかる費用</div>
+
+ <p style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:24px;">
+      海外（米国）での臨床試験参加には、治療費そのものに加え、<strong style="color:var(--amber-l);">渡航・長期滞在・各種手続きに伴う多額の費用</strong>が発生します。具体的な目標金額は治療方針の確定後に公表します。
+ </p>
+
  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
- <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:16px 18px;">
  <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🏥 治療費が全額自己負担</div>
- <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外での治療は日本の健康保険が適用されません。臨床試験参加の場合も、渡航・滞在・付随する検査費用は原則として自己負担となります。</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.8;">海外での治療には日本の健康保険が適用されません。臨床試験参加でも、付随する検査・入院費用などは原則として自己負担となります。</div>
  </div>
- <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:16px 18px;">
  <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">✈️ 渡航・長期滞在費</div>
- <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">治療期間中は現地に長期滞在が必要です。往復の航空券に加え、数ヶ月単位の現地での生活費・宿泊費が発生します。家族全員分が必要になります。</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.8;">治療期間中は現地に長期滞在が必要です。家族分の往復航空券に加え、数ヶ月単位の宿泊費・生活費が発生します。</div>
  </div>
- <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:16px 18px;">
  <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">🔄 複数回の渡航が必要</div>
- <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">臨床試験は複数クールにわたることが多く、経過観察のための再渡航も必要です。治療が長期化するほど費用も積み重なります。</div>
+ <div style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.8;">臨床試験は複数クールにわたることが多く、経過観察のための再渡航も必要です。治療が長期化するほど費用も積み重なります。</div>
  </div>
- <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:14px 16px;">
+ <div style="background:rgba(255,255,255,.05); border-radius:10px; padding:16px 18px;">
  <div style="font-size:12px; font-weight:600; color:var(--amber-l); margin-bottom:6px;">📋 コーディネート・書類費用</div>
- <div style="font-size:12px; color:rgba(255,255,255,.6); line-height:1.8;">海外の病院との交渉・医療通訳・書類翻訳・ビザ取得など、治療以外にも多くの手続き費用が発生します。</div>
- </div>
- </div>
- <div style="margin-top:14px; font-size:12px; color:rgba(255,255,255,.5); line-height:1.8; border-top:1px solid rgba(255,255,255,.1); padding-top:12px;">
-        ※ 具体的な費用は治療方針の確定後にお知らせします。目標金額は担当医との協議も踏まえ設定予定です。
+ <div style="font-size:12px; color:rgba(255,255,255,.65); line-height:1.8;">海外医療機関との交渉、医療通訳、書類翻訳、ビザ取得など、治療以外にも多くの手続き費用が発生します。</div>
  </div>
  </div>
 
-
- <div class="disease-note" style="margin-top:20px;">
- <strong>ご家族より：</strong>この病気は名前を聞いたことのない方がほとんどだと思います。私たちもそうでした。国内でできることはすべてやり尽くしました。それでもれいのために、少しでも望みがある道を諦めたくない。その一心で海外の臨床試験を目指しています。
+ <div style="margin-top:18px; font-size:12px; color:rgba(255,255,255,.55); line-height:1.8; border-top:1px solid rgba(255,255,255,.1); padding-top:14px;">
+      ※ 同種の海外渡航治療では、総額が数千万円規模に及ぶケースも報告されています。具体的な目標金額は治療方針の確定後にお知らせします。
  </div>
  </div>
 </section>
 
 
-<!-- ② 応援メッセージ -->
-<section class="page-section alt-bg" id="messages">
+<!-- ⑦ 最新の状況（最新1件 + ブログへドリルダウン） -->
+<section class="page-section alt-bg" id="latest">
  <div class="container">
- <div class="section-label">応援メッセージ</div>
- <div class="section-title">れいくんへの応援をお聞かせください</div>
+ <div class="section-label">LATEST</div>
+ <div class="section-title">最新の状況</div>
+
+ <div class="latest-card">
+ <div class="latest-date">
+ <div class="m">APR</div>
+ <div class="d">11</div>
+ <div class="y">2026</div>
+ </div>
+ <div class="latest-body">
+ <span class="tag">最新の更新</span>
+ <h4>米国の医療機関との協議を継続中／ホームページを開設</h4>
+ <p>
+          米国の複数医療機関と臨床試験参加に向けた協議を継続しています。並行して、本ホームページを開設しました。治療方針および費用の見通しが立ち次第、寄付の受付を開始する予定です。
+ </p>
+ </div>
+ </div>
+
+ <a href="blog.html" class="blog-link">
+ <div>
+ <div class="blog-link-text">これまでの経過報告をすべて読む</div>
+ <div class="blog-link-sub">ブログページへ ／ 治療状況・お知らせ・日々の様子をまとめています</div>
+ </div>
+ <div class="blog-link-arrow">›</div>
+ </a>
+ </div>
+</section>
 
 
- <!-- sample messages (初期はまだ少ない) -->
+<!-- ⑧ 応援メッセージ -->
+<section class="page-section" id="messages">
+ <div class="container">
+ <div class="section-label">MESSAGES</div>
+ <div class="section-title">れいくんへの応援メッセージ</div>
+
  <div class="messages-grid" style="margin-bottom:28px;">
  <div class="msg-card">
  <div class="msg-top">
@@ -640,7 +941,6 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  </div>
  </div>
 
-
  <div class="msg-form-box">
  <div class="msg-form-title">応援メッセージを送る</div>
  <div class="form-row">
@@ -653,45 +953,10 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 </section>
 
 
-<!-- ③ 経過報告 -->
-<section class="page-section" id="reports">
- <div class="container">
- <div class="section-label">経過報告</div>
- <div class="section-title">れいくんの最新状況</div>
- <div class="report-list">
- <div class="report-card">
- <div class="report-date-block">
- <span class="report-month">APR</span>
- <span class="report-day">11</span>
- <span class="report-year">2026</span>
- </div>
- <div class="report-body">
- <span class="report-tag rt-update">お知らせ</span>
- <div class="report-title">ホームページを開設しました</div>
- <div class="report-excerpt">れいくんを救う会のホームページを開設しました。海外の臨床試験参加に向けた治療方針が決まり次第、寄付の受付を開始する予定です。まずはシェアで応援いただけると幸いです。</div>
- </div>
- </div>
- <div class="report-card">
- <div class="report-date-block" style="background:#3D5166;">
- <span class="report-month">APR</span>
- <span class="report-day">08</span>
- <span class="report-year">2026</span>
- </div>
- <div class="report-body">
- <span class="report-tag rt-treatment">治療状況</span>
- <div class="report-title">現在の状況：海外臨床試験参加に向けて担当医と相談中</div>
- <div class="report-excerpt">国内でできる治療はやり尽くしました。化学療法への耐性がつき、参加できる国内の臨床試験も残っていません。担当医と海外の臨床試験参加について協議を続けています。治療先・内容・費用が確定次第、こちらでご報告します。</div>
- </div>
- </div>
- </div>
- </div>
-</section>
-
-
-<!-- ④ メディア露出 -->
+<!-- ⑨ メディア露出 -->
 <section class="page-section alt-bg" id="media">
  <div class="container">
- <div class="section-label">メディア露出</div>
+ <div class="section-label">MEDIA</div>
  <div class="section-title">メディア掲載情報</div>
  <div class="media-grid">
  <div class="media-empty">
@@ -704,10 +969,10 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 </section>
 
 
-<!-- ⑤ 会計報告 -->
+<!-- ⑩ 会計報告 -->
 <section class="page-section" id="accounting">
  <div class="container">
- <div class="section-label">会計報告</div>
+ <div class="section-label">ACCOUNTING</div>
  <div class="section-title">寄付金の使途と報告</div>
  <div class="accounting-coming">
  <div class="ac-icon">📊</div>
@@ -725,10 +990,10 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 </section>
 
 
-<!-- ⑥ 寄付 -->
+<!-- ⑪ 寄付 -->
 <section class="page-section donation-section" id="donation">
  <div class="container">
- <div class="section-label">寄付</div>
+ <div class="section-label">DONATION</div>
  <div class="section-title">支援募集は、もうすぐ始まります</div>
  <div class="donation-coming">
  <div class="dc-icon">🕊️</div>
@@ -754,14 +1019,12 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
 </section>
 
 
-<!-- ⑦ 会則／よくある質問 -->
+<!-- ⑫ 会則／よくある質問 -->
 <section class="page-section alt-bg" id="rules">
  <div class="container">
- <div class="section-label">会則／よくある質問</div>
+ <div class="section-label">RULES &amp; FAQ</div>
  <div class="section-title">会の規約と、よくいただくご質問</div>
 
-
- <!-- サマリーカード -->
  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;">
  <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:var(--shadow);">
  <div style="font-size:13px; font-weight:600; color:var(--deep); margin-bottom:8px;">📋 会の目的</div>
@@ -781,8 +1044,6 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  </div>
  </div>
 
-
- <!-- ドリルダウンボタン -->
  <a href="rules.html" style="
       display:flex; align-items:center; justify-content:space-between;
       background:var(--deep); color:white;
@@ -815,11 +1076,12 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  <div class="footer-sub">れいくんをすくうかい<br>小児がんと闘うれい（1歳6ヶ月・男の子）を支援する会<br>2026年設立</div>
  </div>
  <div class="footer-nav">
- <a href="#profile">れいくん</a>
- <a href="#messages">応援メッセージ</a>
- <a href="#reports">経過報告</a>
- <a href="#media">メディア露出</a>
- <a href="#accounting">会計報告</a>
+ <a href="#profile">プロフィール</a>
+ <a href="#story">経緯</a>
+ <a href="#progress">治療経過</a>
+ <a href="#hope">海外臨床試験</a>
+ <a href="#cost">治療費</a>
+ <a href="blog.html">ブログ（経過報告）</a>
  <a href="#donation">寄付</a>
  <a href="rules.html">会則／よくある質問</a>
  </div>
@@ -830,7 +1092,5 @@ footer{background:var(--deep);color:white;padding:48px 24px 32px;}
  </div>
  </div>
 </footer>
-
-
 </body>
 </html>
